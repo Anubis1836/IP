@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.ad-container {
+    display: flex;
+    justify-content: center;
+}
+
+.ad {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ad h2 {
+    color: #003366;
+}
+
+.ad a {
+    display: inline-block;
+    background-color: #003366;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.ad a:hover {
+    background-color: #0077b6;
+}
+
+.ad:hover {
+    transform: scale(1.05);
+}
+
+.ad-list {
+    display: flex;
+    justify-content: center;
+}
+
+.ad-list .ad {
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* CSS3 selectors, pseudo-classes, and pseudo-elements can be applied as needed */

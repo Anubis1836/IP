@@ -1,0 +1,34 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #003366;
+}
+
+table.timetable {
+    width: 80%;
+    margin: 20px;
+    border-collapse: collapse;
+}
+
+table.timetable th, table.timetable td {
+    border: 1px solid #003366;
+    padding: 8px;
+    text-align: center;
+}
+
+table.timetable th {
+    background-color: #003366;
+    color: #fff;
+}
+
+img.school-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}

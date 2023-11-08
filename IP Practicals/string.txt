@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript String Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript String Methods</h1>
+
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="performOperations()">Perform Operations</button>
+
+    <div id="output">
+        <h2>Results:</h2>
+        <p id="lengthResult">Length:</p>
+        <p id="sliceResult">Slice:</p>
+        <p id="substringResult">Substring:</p>
+        <p id="toUpperCaseResult">Uppercase:</p>
+        <p id="toLowerCaseResult">Lowercase:</p>
+        <p id="concatResult">Concatenation:</p>
+        <p id="charAtResult">Character at position:</p>
+    </div>
+
+    <script>
+        function performOperations() {
+            const inputString = document.getElementById("inputString").value;
+            const output = document.getElementById("output");
+
+           
+            document.getElementById("lengthResult").textContent = `Length: ${inputString.length}`;
+
+           
+            document.getElementById("sliceResult").textContent = `Slice (2-5): ${inputString.slice(2, 5)}`;
+
+           
+            document.getElementById("substringResult").textContent = `Substring (2-5): ${inputString.substring(2, 5)}`;
+
+          
+            document.getElementById("toUpperCaseResult").textContent = `Uppercase: ${inputString.toUpperCase()}`;
+
+            
+            document.getElementById("toLowerCaseResult").textContent = `Lowercase: ${inputString.toLowerCase()}`;
+
+            
+            const concatenatedString = inputString.concat("JavaScript!");
+            document.getElementById("concatResult").textContent = `Concatenation: ${concatenatedString}`;
+
+           
+            document.getElementById("charAtResult").textContent = `Character at position 3: ${inputString.charAt(3)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management System</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            color: #003366;
+            text-align: center;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #003366;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .red-text {
+            color: red;
+        }
+
+        .blue-background {
+            background-color: #003366;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+    
+    <!-- Inline CSS -->
+    <div class="container" style="font-size: 16px;">
+        <h2>Product List</h2>
+        <table>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>Product A</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Product B</td>
+                <td>30</td>
+            </tr>
+        </table>
+        
+        <!-- External CSS -->
+        <h2 class="red-text">Out of Stock Products</h2>
+        <ul>
+            <li>Product C</li>
+            <li>Product D</li>
+        </ul>
+        
+        <h2 class="blue-background">Product Details</h2>
+        <p>Click <a href="product_details.html">here</a> for more product details.</p>
+    </div>
+</body>
+</html>

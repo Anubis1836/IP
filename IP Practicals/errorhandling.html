@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <h1>Array Sorting</h1>
+    <label for="arrayInput">Enter a comma-separated list of numbers:</label>
+    <input type="text" id="arrayInput">
+    <button onclick="sortArray()">Sort Array</button>
+    <p id="sortedArray">Sorted Array: </p>
+
+    <h1>String Operation</h1>
+    <label for="stringInput">Enter a string:</label>
+    <input type="text" id="stringInput">
+    <button onclick="performStringOperation()">Perform String Operation</button>
+    <p id="stringResult">Result: </p>
+
+    <h1>Current Date</h1>
+    <button onclick="displayCurrentDate()">Display Current Date</button>
+    <p id="currentDate">Current Date: </p>
+
+    <h1>Input Validation</h1>
+    <label for="inputValidation">Enter a number between 1 and 10:</label>
+    <input type="text" id="inputValidation">
+    <button onclick="validateInput()">Validate Input</button>
+    <p id="validationMessage"></p>
+
+    <script>
+        function sortArray() {
+            const inputElement = document.getElementById("arrayInput");
+            const sortedArrayElement = document.getElementById("sortedArray");
+
+            const input = inputElement.value.trim();
+            const array = input.split(",").map(Number);
+
+            if (array.every(Number.isInteger)) {
+                const sortedArray = array.sort((a, b) => a - b);
+                sortedArrayElement.textContent = `Sorted Array: ${sortedArray.join(", ")}`;
+            } else {
+                sortedArrayElement.textContent = "Invalid input. Please enter a comma-separated list of numbers.";
+            }
+        }
+
+        function performStringOperation() {
+            const inputElement = document.getElementById("stringInput");
+            const stringResultElement = document.getElementById("stringResult");
+
+            const input = inputElement.value.trim();
+
+            const result = input.toUpperCase();
+            stringResultElement.textContent = `Result: ${result}`;
+        }
+
+        function displayCurrentDate() {
+            const currentDateElement = document.getElementById("currentDate");
+
+            const currentDate = new Date();
+            currentDateElement.textContent = `Current Date: ${currentDate.toDateString()}`;
+        }
+
+        function validateInput() {
+            const inputElement = document.getElementById("inputValidation");
+            const validationMessageElement = document.getElementById("validationMessage");
+
+            const input = parseInt(inputElement.value, 10);
+
+            if (!isNaN(input) && input >= 1 && input <= 10) {
+                validationMessageElement.textContent = "Input is valid.";
+            } else {
+                validationMessageElement.textContent = "Invalid input. Please enter a number between 1 and 10.";
+            }
+        }
+    </script>
+</body>
+</html>

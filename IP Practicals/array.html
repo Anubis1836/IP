@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #output {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+
+    <label for="inputArray">Enter an array (comma-separated):</label>
+    <input type="text" id="inputArray">
+    <button onclick="performOperations()">Perform Operations</button>
+
+    <div id="output">
+        <h2>Results:</h2>
+        <p id="lengthResult">Length:</p>
+        <p id="toStringResult">Array as String:</p>
+        <p id="popResult">Pop (Remove Last Element):</p>
+        <p id="shiftResult">Shift (Remove First Element):</p>
+      
+        <p id="spliceResult">Splice (Modify Array):</p>
+        <p id="sliceResult">Slice (Extract Part of the Array):</p>
+        <p id="sortResult">Sort:</p>
+    </div>
+
+    <label for="newElement">Add an element to the array:</label>
+    <input type="text" id="newElement">
+    <button onclick="pushElement()">Push Element</button>
+    <p id="pushResult">Push (Add to the End):</p>
+
+    <script>
+        let inputArray = [];
+
+        function performOperations() {
+            const inputArrayStr = document.getElementById("inputArray").value;
+            inputArray = inputArrayStr.split(',').map(item => item.trim());
+            const output = document.getElementById("output");
+
+            // Length
+            document.getElementById("lengthResult").textContent = `Length: ${inputArray.length}`;
+
+            // toString
+            document.getElementById("toStringResult").textContent = `Array as String: ${inputArray.toString()}`;
+
+            // Pop
+            const popped = inputArray.pop();
+            document.getElementById("popResult").textContent = `Pop (Remove Last Element): Removed '${popped}'`;
+
+            // Shift
+            const shifted = inputArray.shift();
+            document.getElementById("shiftResult").textContent = `Shift (Remove First Element): Removed '${shifted}'`;
+
+            // Splice
+            const splicedArray = inputArray.slice(1, 3);
+            document.getElementById("spliceResult").textContent = `Splice (Extract Elements 1-3): ${splicedArray.join(', ')}`;
+
+            // Slice
+            const slicedArray = inputArray.slice(1, 4);
+            document.getElementById("sliceResult").textContent = `Slice (Extract Elements 1-4): ${slicedArray.join(', ')}`;
+        }
+
+        function pushElement() {
+            const newElement = document.getElementById("newElement").value;
+            inputArray.push(newElement);
+            document.getElementById("pushResult").textContent = `Push (Add '${newElement}' to the End): Updated Array: ${inputArray.join(', ')}`;
+        }
+        function sortArray() {
+            inputArray.sort();
+            document.getElementById("sortResult").textContent = `Sort (Ascending): ${inputArray.join(', ')}`;
+        }
+    </script>
+</body>
+</html>
